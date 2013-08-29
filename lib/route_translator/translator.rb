@@ -47,10 +47,13 @@ module RouteTranslator
       # or forcing locale to all routes,
       # or already generating actual unlocalized routes
       if !default_locale?(locale) || RouteTranslator.config.force_locale || RouteTranslator.config.generate_unlocalized_routes
-        new_path = "/#{locale.to_s.downcase}#{new_path}"
+
         # nasty patch :(
-        new_path.gsub!("/en", "/uk")
-        new_path.gsub!("/ca", "/ca-es")
+        locale_path = locale.to_s.downcase
+        locale_path.gsub!("en", "uk")
+        locale_path.gsub!("ca", "ca-es")
+
+        new_path = "/#{locale_path}#{new_path}"
       end
 
       new_path = "/" if new_path.blank?
