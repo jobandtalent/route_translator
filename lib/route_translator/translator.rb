@@ -50,8 +50,13 @@ module RouteTranslator
 
         # nasty patch :(
         locale_path = locale.to_s.downcase
-        locale_path.gsub!("en", "uk")
         locale_path.gsub!("ca", "ca-es")
+        locale_path.gsub!("en", "uk")
+        locale_path.gsub!("en-us", "us")
+        locale_path.gsub!("es-co", "co")
+        locale_path.gsub!("es-mx", "mx")
+        locale_path.gsub!("es-ve", "ve")
+        locale_path.gsub!("pt-br", "br")
 
         new_path = "/#{locale_path}#{new_path}"
       end
