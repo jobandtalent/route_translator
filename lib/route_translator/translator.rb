@@ -57,6 +57,8 @@ module RouteTranslator
         locale_path.gsub!("es-co", "co")
         locale_path.gsub!("es-mx", "mx")
         locale_path.gsub!("es-ve", "ve")
+        locale_path.gsub!("es-pe", "pe")
+        locale_path.gsub!("es-ar", "ar")
         locale_path.gsub!("pt-br", "br")
 
         new_path = "/#{locale_path}#{new_path}"
