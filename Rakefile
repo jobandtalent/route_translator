@@ -1,6 +1,10 @@
 require 'rake'
 require 'rake/testtask'
 require 'rdoc/task'
+require 'rake/bump/tasks'
+require 'route_translator/version'
+
+Rake::Bump::Tasks.new(RouteTranslator::VERSION)
 
 desc 'Default: run tests.'
 task :default => :test

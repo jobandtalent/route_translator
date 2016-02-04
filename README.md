@@ -10,6 +10,24 @@ It started as a fork of the awesome [translate_routes](https://github.com/raul/t
 
 Right now it works with all the different flavours of rails3-4(3.0, 3.1, 3.2, 4.0rc1) but I'm planning to make it compatible with rails 2.3 too. I'll see how it goes
 
+Installation
+------------
+
+Add this line to your application's Gemfile:
+
+```ruby
+source "https://gem.fury.io/jobandtalent/" do
+  gem "route_translator", "3.1.0"
+end
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install route_translator --version 3.1.0 --source https://gem.fury.io/jobandtalent/
 
 Quick Start
 -----------
